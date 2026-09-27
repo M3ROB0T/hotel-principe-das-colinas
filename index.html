@@ -3,13 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotel Príncipe das Colinas - conheça nossas suítes e consulte disponibilidade pelo WhatsApp.">
+  <meta name="theme-color" content="#183f35">
   <title>Hotel Príncipe das Colinas</title>
+  <link rel="stylesheet" href="styles.css?v=20260927-3">
 </head>
-<body>
+<body id="topo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#topo">
+        <img src="images/logo-hotel.jpg" alt="" width="64" height="64">
+        <strong>Hotel Príncipe das Colinas</strong>
+      </a>
 
-  <h1>Hotel Príncipe das Colinas</h1>
+      <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
 
-  <p>Bem-vindo ao nosso site oficial.</p>
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#sobre">O hotel</a>
+        <a href="#suites">Suítes</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+        <a class="nav-booking" href="#reserva">Planejar estadia <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="conteudo">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="fotos-otimizadas/primeiro%20andar/area%20externa/frente%20do%20hotel/IMG_0013.webp" alt="Fachada do Hotel Príncipe das Colinas" fetchpriority="high" width="1920" height="1280">
+      </div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Seu próximo destino</p>
+        <h1>Chegue.<br> Relaxe.<br><em>Sinta-se bem.</em></h1>
+        <p>
+          Sua estadia no Hotel Príncipe das Colinas começa aqui.
+          Explore nossas suítes e encontre o seu espaço para descansar.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#suites">Explorar suítes <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#galeria">Ver o hotel <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="hero-footnote">Fotos reais. Um convite para conhecer cada detalhe.</p>
+      </div>
+      <a href="#galeria" class="hero-photo-label"><span>Conheça por dentro</span><strong>Hotel Príncipe das Colinas <span aria-hidden="true">↗</span></strong></a>
+    </section>
+
+    <div class="amenities-strip" aria-label="Ambientes do hotel">
+      <span>Piscina &amp; pátio</span><span>Academia</span><span>Brinquedoteca</span><span>Espaços de convivência</span>
+    </div>
+
+    <section class="section intro" id="sobre">
+      <div class="content-grid">
+        <div class="reveal">
+          <p class="eyebrow dark">Sobre o hotel</p>
+          <h2>Seu tempo merece<br>uma boa estadia.</h2>
+        </div>
+        <div class="intro-copy reveal">
+          <p>
+            Da sua suíte aos espaços de convivência, conheça os ambientes
+            que fazem parte do Hotel Príncipe das Colinas.
+          </p>
+          <p>
+            Navegue pelas fotos, escolha sua suíte e converse com nossa equipe
+            para planejar sua visita.
+          </p>
+          <a class="text-link" href="#reserva">Vamos planejar sua estadia <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-band">
+      <div class="visual-image parallax-image" data-parallax="0.18">
+        <img src="fotos-otimizadas/primeiro%20andar/area%20externa/area%20da%20piscina%20e%20patio/IMG_9990.webp" alt="Piscina e pátio do hotel" loading="lazy">
+      </div>
+      <div class="visual-overlay"></div>
+      <div class="visual-copy reveal">
+        <span>Além da sua suíte</span>
+        <h2>Faça uma pausa.<br>Aproveite o momento.</h2>
+      </div>
+    </section>
+
+    <section class="section suites-section" id="suites">
+      <div class="section-header reveal">
+        <div>
+          <p class="eyebrow dark">Encontre o seu espaço</p>
+          <h2>Uma suíte para sua estadia.</h2>
+        </div>
+        <p>Veja as fotos, conheça cada suíte e consulte a disponibilidade diretamente com o hotel.</p>
+      </div>
+      <div class="suite-tools">
+        <div class="suite-jump"><label for="suiteJump">Ir para a suíte</label><select id="suiteJump"><option value="">Escolha o número</option></select></div>
+        <div class="carousel-controls">
+          <p class="suite-count" aria-live="polite"></p>
+          <button type="button" class="carousel-arrow prev" aria-label="Suíte anterior" aria-controls="suiteCarousel">←</button>
+          <button type="button" class="carousel-arrow next" aria-label="Próxima suíte" aria-controls="suiteCarousel">→</button>
+        </div>
+      </div>
+      <div class="carousel-wrap reveal">
+        <div class="suite-carousel" id="suiteCarousel" tabindex="0" aria-label="Catálogo de suítes"></div>
+      </div>
+      <p class="carousel-hint">Deslize para explorar · Toque na foto para ampliar</p>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="section-header reveal">
+        <div>
+          <p class="eyebrow dark">O hotel em detalhes</p>
+          <h2>Imagine-se aqui.</h2>
+        </div>
+        <p>Explore os ambientes e toque nas fotos para ver os detalhes.</p>
+      </div>
+
+      <div class="gallery-filters" role="group" aria-label="Filtrar fotos por ambiente"></div>
+      <p class="gallery-count" aria-live="polite"></p>
+      <div class="gallery-grid" id="hotelGallery"></div>
+    </section>
+
+    <section class="section reviews-section" id="avaliacoes" aria-labelledby="reviewsTitle">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow dark">Experiências de quem já veio</p>
+          <h2 id="reviewsTitle">O que dizem nossos hóspedes.</h2>
+        </div>
+        <a class="text-link" href="https://www.google.com/maps?cid=12341129981086473559" target="_blank" rel="noopener noreferrer">Ver avaliações no Google <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="review-summary">
+        <strong class="review-score">5,0 <span>/ 5</span></strong>
+        <div><span class="review-stars" aria-hidden="true">★★★★★</span><p>22 avaliações no Google Maps</p></div>
+        <p class="review-updated">Nota e avaliações consultadas em 27/09/2026.</p>
+      </div>
+      <div class="review-grid">
+        <figure class="review-card">
+          <span class="review-stars" aria-label="4 de 5 estrelas">★★★★<span aria-hidden="true">☆</span></span>
+          <blockquote>“Funcionários educados e atenciosos”</blockquote>
+          <figcaption><strong>Ronaldoadv Bittencourt</strong><span>Trecho de avaliação no Google Maps</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" aria-label="5 de 5 estrelas">★★★★★</span>
+          <blockquote>“ótima recepção, lugar agradabilíssimo”</blockquote>
+          <figcaption><strong>Walci</strong><span>Trecho de avaliação no Google Maps</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" aria-label="5 de 5 estrelas">★★★★★</span>
+          <blockquote>“Atendimento muito cordial”</blockquote>
+          <figcaption><strong>Jamerson Soares</strong><span>Trecho de avaliação no Google Maps</span></figcaption>
+        </figure>
+      </div>
+      <p class="reviews-source">Leia as avaliações completas e a nota atualizada no <a href="https://www.google.com/maps?cid=12341129981086473559" target="_blank" rel="noopener noreferrer">perfil do hotel no Google Maps</a>.</p>
+    </section>
+
+    <section class="reservation-stage" id="reserva">
+      <div class="reservation-bg parallax-image" data-parallax="0.12">
+        <img src="fotos-otimizadas/quartos/area%20master/IMG_0777.webp" alt="Sala de estar do hotel" loading="lazy">
+      </div>
+      <div class="reservation-shade"></div>
+
+      <div class="reservation-shell">
+        <div class="reservation-copy reveal">
+          <p class="eyebrow">Sua próxima estadia</p>
+          <h2>Vamos receber<br>você?</h2>
+          <p>
+            Conte quando pretende vir e qual suíte você gostou.
+            Nossa equipe conversa com você pelo WhatsApp sobre valores e disponibilidade.
+          </p>
+          <a class="reservation-phone" href="tel:+5593984182845">(93) 98418-2845 <span aria-hidden="true">↗</span></a>
+          <div class="glass-note">
+            A disponibilidade e a reserva são confirmadas pela equipe do hotel.
+          </div>
+        </div>
+
+        <form class="booking-form reveal" id="reservationForm">
+          <div class="form-heading"><span class="eyebrow dark">Planeje sua visita</span><h3>Consulte disponibilidade</h3><p>Preencha e continue pelo WhatsApp.</p></div>
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Como podemos chamar você?" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="entrada">Check-in</label>
+              <input id="entrada" name="entrada" type="date" required>
+            </div>
+            <div class="field">
+              <label for="saida">Check-out</label>
+              <input id="saida" name="saida" type="date" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="hospedes">Hóspedes</label>
+              <input id="hospedes" name="hospedes" type="number" min="1" value="1" required>
+            </div>
+            <div class="field">
+              <label for="suite">Suíte</label>
+              <select id="suite" name="suite">
+                <option value="">Sem preferência</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="observacao">Observações</label>
+            <textarea id="observacao" name="observacao" rows="4" placeholder="Ex.: horário previsto de chegada"></textarea>
+          </div>
+
+          <button class="btn btn-gold btn-full" type="submit">
+            Continuar no WhatsApp <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note">Você revisa a mensagem antes de enviar.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="eyebrow dark">Contato</p>
+          <h2>A sua estadia começa<br>com uma conversa.</h2>
+          <p>Dúvidas ou uma ocasião especial? Fale com nossa equipe.</p>
+          <a class="contact-phone" href="tel:+5593984182845">(93) 98418-2845</a>
+        </div>
+        <a class="btn btn-dark" id="whatsappContact" href="#" target="_blank" rel="noopener">
+          Falar com o hotel <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="contact-details">
+        <article class="contact-detail-card">
+          <span class="eyebrow dark">Localização</span>
+          <h3>Encontre-nos em Almeirim.</h3>
+          <address>R. Cap. Pantoja<br>Almeirim, PA · CEP 68230-000</address>
+          <a class="text-link" href="https://www.google.com/maps?cid=12341129981086473559" target="_blank" rel="noopener noreferrer">Abrir no Google Maps <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="contact-detail-card instagram-card">
+          <span class="eyebrow dark">Instagram</span>
+          <h3>Mais momentos do hotel.</h3>
+          <p>Acompanhe nosso dia a dia e conheça mais dos nossos espaços.</p>
+          <a class="text-link" href="https://www.instagram.com/principedascolinasoficial/" target="_blank" rel="noopener noreferrer">@principedascolinasoficial <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 7.5c-.6 0-1 .7-1 1.5 0 2.6 3.1 5.5 5.5 5.5.8 0 1.7-.5 1.7-1.3l-2-1-1 1a6.5 6.5 0 0 1-2.6-2.6l.8-.8L9.5 7.5Z" fill="currentColor"/></svg><span>Fale com o hotel</span>
+  </a>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand footer-brand">
+        <img src="images/logo-hotel.jpg" alt="" width="64" height="64">
+        <strong>Hotel Príncipe das Colinas</strong>
+      </div>
+      <p>© <span id="currentYear"></span> Hotel Príncipe das Colinas</p>
+    </div>
+  </footer>
+
+  <dialog class="photo-dialog" aria-labelledby="photoCaption">
+    <button type="button" class="photo-close" aria-label="Fechar foto">×</button>
+    <img id="photoImage" alt="">
+    <div class="photo-toolbar">
+      <button type="button" class="photo-prev" aria-label="Foto anterior">←</button>
+      <p id="photoCaption"></p>
+      <button type="button" class="photo-next" aria-label="Próxima foto">→</button>
+    </div>
+  </dialog>
+  <script src="fotos.js?v=20260927-3"></script>
+  <script src="script.js?v=20260927-3"></script>
 </body>
 </html>
